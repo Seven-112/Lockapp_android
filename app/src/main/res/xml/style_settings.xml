@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Preference
+        android:key="PrefStyleClock"
+        android:summary="Edit lockscreen clock like text color,size and font style"
+        android:title="Clock Style"/>
+    <Preference
+        android:key="PrefStyleSlide"
+        android:summary="Edit Slide to unlock text color and font style"
+        android:title="Slide Text Style"/>
+    <Preference
+        android:key="PrefStyleMessage"
+        android:title="Lockscreen Message"/>
+
+</PreferenceScreen>

@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/PatternImageBlur"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="1"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/MainLockImageBlack"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="1"
+        android:background="#A6000000"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/TxtDrawPattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pattern"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Draw Pattern"
+        android:textColor="#FFF"
+        android:textSize="15sp" />
+
+    <com.codecanyon.lockscreen.MaterialLockView xmlns:lockview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        lockview:CORRECT_COLOR="#00ff00"
+        lockview:LOCK_COLOR="#fff"
+        lockview:WRONG_COLOR="#ff0000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/PatternButton1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_common_gray_btn"
+            android:text="CANCEL"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/PatternButton2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_common_gray_btn"
+            android:text="NEXT"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</RelativeLayout>

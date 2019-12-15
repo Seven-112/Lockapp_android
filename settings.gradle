@@ -1,0 +1,4 @@
+include ':app'
+include ':SubProjects:libraryColorPickrBest'
+include ':SubProjects:lib_sound_crop'
+include ':SubProjects:library_gellaryfinal'

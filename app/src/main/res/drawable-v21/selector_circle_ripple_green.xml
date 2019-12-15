@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/GreenSelect" >
+
+    <item android:state_pressed="true">
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="2"
+            android:useLevel="false" >
+            <solid android:color="@color/GreenSelect" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="2"
+            android:useLevel="false" >
+            <solid android:color="@color/GreenSelect" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="2"
+            android:useLevel="false" >
+            <solid android:color="@color/GreenSelect" />
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="2"
+            android:useLevel="false" >
+            <solid android:color="@color/Green" />
+        </shape>
+    </item>
+
+</ripple>

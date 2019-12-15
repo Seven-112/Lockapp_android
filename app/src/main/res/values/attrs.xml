@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialLockView">
+        <attr name="LOCK_COLOR" format="color"/>
+        <attr name="WRONG_COLOR" format="color"/>
+        <attr name="CORRECT_COLOR" format="color"/>
+    </declare-styleable>
+
+    <attr name="actionBarDivider" format="reference">
+    </attr>
+    <attr name="actionBarItemBackground" format="reference">
+    </attr>
+    <attr name="actionBarPopupTheme" format="reference">
+    </attr>
+
+    <attr name="colorAccent" format="color">
+    </attr>
+
+</resources>

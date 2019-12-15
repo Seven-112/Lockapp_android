@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.codecanyon.lockscreen.LockscrenLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.codecanyon.lockscreen.CustomDigitalClock
+        android:id="@+id/UnlockDClock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/UnlockTxtClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="10:43"
+        android:textColor="#FFFFFF"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/UnlockTxtDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/UnlockTxtClock"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Medium Text"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/UnlockTxtMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/UnlockTxtDay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <com.codecanyon.lockscreen.ShinnyTextView
+        android:id="@+id/UnlockTxtSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:drawableLeft="@drawable/ic_chevron_right_black_36dp"
+        android:gravity="center"
+        android:text="Slide to unlock"
+        android:textSize="22sp" />
+
+</com.codecanyon.lockscreen.LockscrenLayout>

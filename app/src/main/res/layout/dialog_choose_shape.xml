@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="@color/mantis" android:paddingTop="@dimen/small" android:paddingBottom="@dimen/small" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.locker.core.vpattern.custom.ITextView android:textSize="@dimen/font_size_xlarge" android:textColor="@color/white" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/normal" android:text="@string/shape"/>
+        </FrameLayout>
+        <android.support.p013v7.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_above="@+id/ad_contrainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/huge"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/btn_rate"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:layout_margin="@dimen/x_small"
+            app:srcCompat="@drawable/ic_star_black_24dp"/>
+        <TextView
+            android:textSize="@dimen/font_size_xlarge"
+            android:textColor="@color/mantis"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:maxLines="1"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:layout_margin="@dimen/x_small"
+            app:srcCompat="@drawable/ic_add_shopping_cart_24dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="18dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_nen"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/huge" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:id="@+id/enable_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small">
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_enablelock" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/switch_lock_screen_enable"
+                    android:layout_toRightOf="@+id/icon1"
+                    android:paddingLeft="@dimen/large"
+                    android:text="@string/text_01"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_standard" />
+
+                <CheckBox
+                    android:clickable="false"
+                    android:id="@+id/switch_lock_screen_enable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/toggle"
+                    android:paddingRight="@dimen/x_small" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/huge"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:id="@+id/btnLockScreenSounds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small">
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_slide" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/switchSound"
+                    android:layout_toRightOf="@+id/icon2"
+                    android:paddingLeft="@dimen/large"
+                    android:text="@string/Pref_Lockscreen_Sound"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_standard" />
+
+                <CheckBox
+                    android:clickable="false"
+                    android:id="@+id/switchSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/toggle"
+                    android:paddingRight="@dimen/x_small" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/huge"
+                android:background="@color/underline_color"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/btnLockScreenVibration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_screenoff" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/switchVibration"
+                    android:layout_alignBottom="@+id/switchVibration"
+                    android:layout_toRightOf="@+id/icon3"
+                    android:paddingLeft="@dimen/large"
+                    android:text="@string/text_03"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_standard" />
+
+                <CheckBox
+                    android:clickable="false"
+                    android:id="@+id/switchVibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/toggle"
+                    android:paddingRight="@dimen/x_small" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/huge"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:id="@+id/more_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small">
+
+                <ImageView
+                    android:id="@+id/icon4"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_sound1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/switch_btn_sound"
+                    android:layout_toRightOf="@+id/icon4"
+                    android:paddingLeft="@dimen/large"
+                    android:text="More Settings"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_standard" />
+
+                <CheckBox
+                    android:visibility="gone"
+                    android:id="@+id/switch_btn_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/toggle"
+                    android:paddingRight="@dimen/x_small" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_nen"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/xxx_large" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:id="@+id/btnLockStyles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small">
+
+                <ImageView
+                    android:id="@+id/icon5"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_style" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/icon5"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/large">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/text_05"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_standard" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="@dimen/xx_large"
+                            android:layout_height="@dimen/xx_large"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/normal"
+                            app:srcCompat="@drawable/ic_back" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/huge"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:id="@+id/passcode_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small">
+
+                <ImageView
+                    android:id="@+id/icon6"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_passcode" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon6"
+                    android:paddingLeft="@dimen/large"
+                    android:text="@string/text_06"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_standard" />
+
+                <ImageView
+                    android:layout_width="@dimen/xx_large"
+                    android:layout_height="@dimen/xx_large"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/normal"
+                    app:srcCompat="@drawable/ic_back" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/huge"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:id="@+id/btnWallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small">
+
+                <ImageView
+                    android:id="@+id/icon7"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    app:srcCompat="@drawable/ic_picture" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon7"
+                    android:paddingLeft="@dimen/large"
+                    android:text="@string/text_07"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_standard" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/xx_large"
+                    android:layout_height="@dimen/xx_large"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/normal"
+                    app:srcCompat="@drawable/ic_back" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/huge"
+                android:background="@color/underline_color" />
+
+            <RelativeLayout
+                android:id="@+id/btn_aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small">
+
+
+
+                <ImageView
+                    android:id="@+id/icon8"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_wallpaper" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icon8"
+                    android:paddingLeft="@dimen/large"
+                    android:text="About us"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_standard" />
+
+                <ImageView
+                    android:layout_width="@dimen/xx_large"
+                    android:layout_height="@dimen/xx_large"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/normal"
+                    app:srcCompat="@drawable/ic_back" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/privacy_btn"
+                android:background="?attr/selectableItemBackground"
+                android:paddingLeft="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="@dimen/icon_size_small"
+                    android:layout_height="@dimen/icon_size_small"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_wallpaper"/>
+
+                <TextView
+                    android:textSize="@dimen/font_size_standard"
+                    android:textColor="@color/black"
+                    android:paddingLeft="@dimen/large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_08"
+                    android:layout_toRightOf="@+id/icon"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:paddingRight="@dimen/normal"
+                    android:layout_width="@dimen/xx_large"
+                    android:layout_height="@dimen/xx_large"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_back"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/huge"
+                android:background="@color/underline_color" />
+
+            <com.google.android.gms.ads.formats.UnifiedNativeAdView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:aapt="http://schemas.android.com/aapt"
+                android:id="@+id/ad_view"
+                android:background="@drawable/boder"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9.4dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingTop="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ad_icon"
+                                android:layout_width="71.3dp"
+                                android:layout_height="71.3dp"
+                                android:layout_marginRight="7.5dp"
+                                android:layout_marginBottom="7.5dp"
+                                android:adjustViewBounds="true"/>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="26.3sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#57cf33"
+                                    android:id="@+id/ad_headline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:textSize="24.4sp"
+                                        android:textStyle="bold"
+                                        android:gravity="bottom"
+                                        android:id="@+id/ad_advertiser"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"/>
+                                    <RatingBar
+                                        android:id="@+id/ad_stars"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:numStars="5"
+                                        android:stepSize="0.5"
+                                        android:isIndicator="true"
+                                        style="?android:attr/ratingBarStyleSmall"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textSize="20.6sp"
+                                android:id="@+id/ad_body"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                            <com.google.android.gms.ads.formats.MediaView
+                                android:layout_gravity="center_horizontal"
+                                android:id="@+id/ad_media"
+                                android:layout_width="match_parent"
+                                android:layout_height="243.8dp"
+                                android:layout_marginTop="7.5dp"
+                                android:layout_marginBottom="9.4dp"/>
+
+                            <LinearLayout
+                                android:layout_gravity="end"
+                                android:orientation="horizontal"
+                                android:paddingTop="18.8dp"
+                                android:paddingBottom="18.8dp"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="22.5sp"
+                                    android:id="@+id/ad_price"
+                                    android:paddingLeft="9.4dp"
+                                    android:paddingRight="9.4dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textSize="22.5sp"
+                                    android:id="@+id/ad_store"
+                                    android:paddingLeft="9.4dp"
+                                    android:paddingRight="9.4dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <Button
+                                    android:textSize="22.5sp"
+                                    android:gravity="center"
+                                    android:id="@+id/ad_call_to_action"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+
+        </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ad_contrainer"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+</RelativeLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="@bool/TRUE"
+        android:key="PrefLockscreenActive"
+        android:summary="@string/Pref_Lockscreen_Active_s"
+        android:title="@string/Pref_Lockscreen_Active" />
+    <CheckBoxPreference
+        android:defaultValue="@bool/FALSE"
+        android:key="PrefLockscreenSound"
+        android:summary="@string/Pref_Lockscreen_Sound_s"
+        android:title="@string/Pref_Lockscreen_Sound" />
+    <CheckBoxPreference
+        android:defaultValue="@bool/FALSE"
+        android:key="PrefLockscreenVibration"
+        android:summary="@string/Pref_Lockscreen_Vibration_s"
+        android:title="@string/Pref_Lockscreen_Vibration" />
+    <CheckBoxPreference
+        android:defaultValue="@bool/FALSE"
+        android:key="PrefLockscreenPowerSaving"
+        android:summary="@string/Pref_Lockscreen_Power_s"
+        android:title="@string/Pref_Lockscreen_Power" />
+    <Preference
+        android:key="PrefLockscreenSelectNone"
+        android:summary="@string/Pref_Lockscreen_Select_None_s"
+        android:title="@string/Pref_Lockscreen_Select_None" />
+
+    <Preference
+        android:key="PrefFAQ"
+        android:summary="@string/Pref_FAQ_s"
+        android:title="@string/Pref_FAQ" />
+
+    <Preference
+        android:key="PrefAboutUs"
+        android:summary="@string/Pref_Lockscreen_about_us_s"
+        android:title="@string/Pref_Lockscreen_about_us" />
+
+    <Preference
+        android:key="PrefLicence"
+        android:summary="@string/Pref_Licence_s"
+        android:title="@string/Pref_Licence" />
+    PrefLicence
+
+</PreferenceScreen>

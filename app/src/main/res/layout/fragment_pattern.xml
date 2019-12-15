@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.codecanyon.lockscreen.PatternLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/TxtDrawPattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pattern"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Draw Pattern"
+        android:textColor="#FFF"
+        android:textSize="15sp" />
+
+    <com.codecanyon.lockscreen.MaterialLockView
+        xmlns:lockview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        lockview:CORRECT_COLOR="#00ff00"
+        lockview:LOCK_COLOR="#fff"
+        lockview:WRONG_COLOR="#ff0000" />
+
+</com.codecanyon.lockscreen.PatternLayout>

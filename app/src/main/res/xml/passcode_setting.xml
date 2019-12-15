@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="PrefPasscodeChange"
+        android:summary="Change Passcode"
+        android:title="Change Passcode" />
+
+    <ListPreference
+        android:key="PrefPasscodeStyle"
+        android:title="Change Passcode style"
+        android:defaultValue="0"
+        android:entries="@array/settings_push_delay_human_value"
+        android:entryValues="@array/settings_push_delay_phone_value" />
+
+</PreferenceScreen>

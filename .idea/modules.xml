@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LockScreenCodeCanyon.iml" filepath="$PROJECT_DIR$/LockScreenCodeCanyon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SubProjects/SubProjects.iml" filepath="$PROJECT_DIR$/SubProjects/SubProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SubProjects/lib_sound_crop/lib_sound_crop.iml" filepath="$PROJECT_DIR$/SubProjects/lib_sound_crop/lib_sound_crop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SubProjects/libraryColorPickrBest/libraryColorPickrBest.iml" filepath="$PROJECT_DIR$/SubProjects/libraryColorPickrBest/libraryColorPickrBest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SubProjects/library_gellaryfinal/library_gellaryfinal.iml" filepath="$PROJECT_DIR$/SubProjects/library_gellaryfinal/library_gellaryfinal.iml" />
+    </modules>
+  </component>
+</project>
